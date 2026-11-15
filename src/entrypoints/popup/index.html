@@ -4,9 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pushup Break</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main><h1>Pushup Break</h1></main>
+    <main>
+      <header>
+        <img src="/icon/48.png" alt="" width="32" height="32" />
+        <h1>Pushup Break</h1>
+      </header>
+      <label for="interval">Break after</label>
+      <output id="interval-value" for="interval">20 minutes</output>
+      <input
+        id="interval"
+        type="range"
+        min="2"
+        max="30"
+        step="1"
+        value="20"
+        aria-describedby="hint"
+      />
+      <div class="scale" aria-hidden="true"><span>2 min</span><span>30 min</span></div>
+      <p id="hint">of watch time. Applies to open YouTube tabs right away.</p>
+      <p id="saved" role="status"></p>
+    </main>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>
