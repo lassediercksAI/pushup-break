@@ -8,3 +8,4 @@ web-ext.config.ts
 .vscode/*
 !.vscode/extensions.json
 .idea/
+dist/
