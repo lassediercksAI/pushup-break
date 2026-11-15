@@ -9,7 +9,8 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/domain/**/*.ts', 'src/application/**/*.ts', 'src/infrastructure/**/*.ts'],
-      exclude: ['**/*.test.ts'],
+      // ports.ts holds only types and compiles to nothing.
+      exclude: ['**/*.test.ts', 'src/application/ports.ts'],
       reporter: ['text', 'json-summary', 'html'],
       thresholds: {
         'src/domain/**/*.ts': full,
