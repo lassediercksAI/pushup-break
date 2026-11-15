@@ -49,6 +49,11 @@ export default tseslint.config(
     ...tseslint.configs.disableTypeChecked,
   },
   {
+    // Spies on DOM methods are passed to expect() unbound on purpose.
+    files: ['**/*.test.ts'],
+    rules: { '@typescript-eslint/unbound-method': 'off' },
+  },
+  {
     // Build-time tooling: imperative pixel loops are fine here.
     files: ['scripts/**/*.ts'],
     rules: { '@typescript-eslint/no-non-null-assertion': 'off' },
